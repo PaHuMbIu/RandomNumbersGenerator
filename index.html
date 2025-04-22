@@ -1,10 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RandomNumbersGenerator</title>
+    <meta name="theme-color" content="#007bff">
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/generator.css">
 </head>
 <body>
-$END$
+
+<div class="container">
+    <h2>Генератор чисел</h2>
+
+    <label for="count">Количество чисел:</label>
+    <input type="number" id="count" value="25" min="1">
+
+    <label for="min">Минимум:</label>
+    <input type="number" id="min" value="1">
+
+    <label for="max">Максимум:</label>
+    <input type="number" id="max" value="30">
+
+    <div class="options">
+        <label><input type="checkbox" id="unique"> Только уникальные</label>
+        <label><input type="checkbox" id="sort"> Отсортировать</label>
+    </div>
+
+    <button onclick="generate()">Сгенерировать</button>
+    <button class="copy-button" onclick="copyToClipboard()">Скопировать</button>
+
+    <div class="output" id="output"></div>
+
+    <div class="theme-toggle">
+        <button onclick="toggleTheme()">🌗 Переключить тему</button>
+    </div>
+</div>
+
+<script src="./scripts/generator.js"></script>
 </body>
 </html>
